@@ -24,19 +24,19 @@ DynamoDB
 
 ---
 
-# Repository Structure
+## Repository Structure
+
+```
 cloud-resume-backend
 │
 ├── lambda
-│ └── visitor_counter.py
+│   └── visitor_counter.py
 │
 ├── terraform
-│ └── main.tf
+│   └── main.tf
 │
 └── docs
-└── system-overview.md
-
-
+    └── system-overview.md
 ---
 
 # Backend Components
