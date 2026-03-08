@@ -32,7 +32,10 @@ resource "aws_lambda_function" "visitor_counter" {
   handler = "lambda_function.lambda_handler"
   runtime = "python3.13"
 
-  filename = "placeholder.zip"
+  filename         = data.archive_file.visitor_counter_zip.output_path
+  source_code_hash = data.archive_file.visitor_counter_zip.output_base64sha256
+
+   publish = false
 
   memory_size   = 128
   timeout       = 3
@@ -50,7 +53,8 @@ resource "aws_lambda_function" "visitor_counter" {
   lifecycle {
     ignore_changes = [
       filename,
-      runtime
+      runtime,
+      source_code_hash
     ]
   }
 }
