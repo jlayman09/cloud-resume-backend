@@ -1,0 +1,27 @@
+# Terraform working directory
+
+.terraform/
+
+# Terraform state files
+
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+
+# Terraform variable files (may contain secrets)
+
+*.tfvars
+*.tfvars.json
+
+# Lambda build artifacts
+
+*.zip
+
+# Crash logs
+
+crash.log
+
+# OS junk
+
+.DS_Store
+Thumbs.db
